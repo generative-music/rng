@@ -44,7 +44,3 @@ const seededRandomNumderOfSemitones = getRandomIntegerBetween(0, 13, { rng });
 const seededRandomNote = getRandomElementOf(notes, { rng });
 const seededMelody = shuffleArray(notes, { rng });
 ```
-
-## API
-
-### `getRandomNumberBetween`
