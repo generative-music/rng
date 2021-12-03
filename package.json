@@ -1,0 +1,35 @@
+{
+  "name": "@generative-music/rng",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A collection of utilities related to random number generators",
+  "main": "dist/umd/rng.js",
+  "module": "dist/esm/rng.js",
+  "scripts": {
+    "test": "echo \"No tests found\"",
+    "lint": "eslint src",
+    "build:esm": "rollup src/index.js --file dist/esm/rng.js",
+    "build:umd": "rollup src/index.js --file dist/umd/rng.js --format umd --name generativeMusic.rng",
+    "build": "npm run build:esm && npm run build:umd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/generative-music/rng.git"
+  },
+  "author": "Alex Bainter <alex@alexbainter.com> (https://alexbainter.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/generative-music/rng/issues"
+  },
+  "homepage": "https://github.com/generative-music/rng#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@alexbainter/eslint-config": "^0.1.2",
+    "eslint": "^8.3.0",
+    "prettier": "^2.5.0",
+    "rollup": "^2.60.2"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "@alexbainter/eslint-config/node",
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
