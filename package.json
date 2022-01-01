@@ -1,7 +1,7 @@
 {
   "name": "@generative-music/rng",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A collection of utilities related to random number generators",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
