@@ -3,14 +3,17 @@
   "type": "module",
   "version": "0.0.0",
   "description": "A collection of utilities related to random number generators",
-  "main": "dist/umd/rng.js",
-  "module": "dist/esm/rng.js",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"No tests found\"",
     "lint": "eslint src",
-    "build:esm": "rollup src/index.js --file dist/esm/rng.js",
-    "build:umd": "rollup src/index.js --file dist/umd/rng.js --format umd --name generativeMusic.rng",
-    "build": "npm run build:esm && npm run build:umd"
+    "build": "babel src --out-dir dist",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -27,9 +30,12 @@
   },
   "devDependencies": {
     "@alexbainter/eslint-config": "^0.1.2",
-    "eslint": "^8.3.0",
-    "prettier": "^2.5.0",
-    "rollup": "^2.60.2"
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@generative-music/browserslist-config-standardized-audio-context": "^25.0.1",
+    "eslint": "^8.6.0",
+    "prettier": "^2.5.0"
   },
   "dependencies": {}
 }
